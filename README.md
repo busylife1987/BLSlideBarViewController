@@ -36,7 +36,22 @@ BLSlideBarViewController实现多个视图间的滑动切换效果，能够自�
 }
 
 
+#pragma mark --- BLSlideBarViewControllerDataDelegate
+- (NSUInteger)numberOfChilderViewControllerInSlideViewController:(BLSlideBarViewController *)slideBarViewController{
+    return _controllers.count;
+}
+
+- (UIViewController*)slideBarViewController:(BLSlideBarViewController *)slideBarViewController viewControllerAtIndex:(NSUInteger)index{
+    return _controllers[index];
+}
+
+#pragma mark --- BLSlideBarViewControllerDelegate
+- (void)slideBarViewController:(BLSlideBarViewController *)slideBarViewController offset:(CGPoint)offset{
+    [self.slideBarHeadView setContentOffset:offset];
+}
+
 ```
+详细使用方法见Demo中ViewController代码
 
 效果展示<br/>
 
