@@ -62,6 +62,6 @@ BLSlideBarViewController实现多个视图间的滑动切换效果，能够自�
  * 使用 CocoaPods安装
 ```
   platform: iOS, '8.0'
-  pod 'BLSlideBarViewController','~>1.1'
+  pod 'BLSlideBarViewController','~>1.2'
   
 ```
